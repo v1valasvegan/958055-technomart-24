@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Victor Zhuravlev](https://up.htmlacademy.ru/htmlcss/24/user/958055).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Кононенко] (https://htmlacademy.ru/profile/id30979).
 
 ---
 
