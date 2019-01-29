@@ -11,7 +11,7 @@
     <nav class="main-navigation">
       <section class="navigation-bar">
         <h2 class="visually-hidden">Верхнее меню</h2>
-        <a href="#">Техномарт</a>
+        <h1><a href="#">Техномарт</a></h1>
         <span>Поиск</span> <!-- здесь будет форма поиска-->
         <a href="#">Закладки</a>
         <a href="#">Корзина</a>
@@ -23,15 +23,10 @@
         <address>г.Санкт-Петербург, гл. Б. Конюшенная, д. 19/8</address>
       </p>
       <p class="navigation-login">
-        <ul class="not-logged-in">
+        <ul>
           <!-- на лекции про Барбершоп сказали не делать ссылку, а оставить так пока что. На 4-й лекции расскажут, как правильно сделать-->
           <li class="login-link">Вход</li>
           <li class="registration-link">Регистрация</li>
-        </ul>
-        <ul class="logged-in">
-          <li class="logout-link"></li> <!-- Здесь будут форма выхода и смены пользователя -->
-          <li class="my-orders-link"><a href="#">Мои заказы</a></li>
-          <li class="my-technomart-link"><a href="#">Личный кабинет</a></li>
         </ul>
       </p>
       <ul class="site-navigation">
@@ -48,8 +43,6 @@
 
   <main class="container">
 
-    <h1 class="visually-hidden">Интернет-магазин «Техномарт»</h1>
-
     <section class="promo">
       <h2 class="visually-hidden">Мы предлагаем</h2>
       <div class="promo-item"><a href="#">Материалы</a> </div>
@@ -61,8 +54,9 @@
     </section>
     <section class="popular">
       <h2>Популярные товары</h2>
+      <a class="full-list" href="Все популярные товары"></a>
       <ul class="catalog-list">
-        <li class="catalog-item on-sale">
+        <li class="catalog-item">
           <a href="catalog-item.html">
             <h3>Перфоратор Bosch BFG 9000</h3>
           </a>
@@ -76,7 +70,7 @@
             <a href="#" class="button">25500 ₽</a>
           </p>
         </li>
-        <li class="catalog-item on-sale">
+        <li class="catalog-item ">
           <a href="catalog-item.html">
             <h3>Перфоратор Bosch BFG 3000</h3>
           </a>
@@ -90,7 +84,7 @@
             <a href="#" class="button">15500 ₽</a>
           </p>
         </li>
-        <li class="catalog-item on-sale">
+        <li class="catalog-item">
           <a href="catalog-item.html">
             <h3>Перфоратор Bosch BFG 6000</h3>
           </a>
@@ -114,7 +108,6 @@
             </a>
           </p>
           <p class="catalog-item-price">
-            <span class="item-price-old">none</span>
             <a href="#" class="button">12500 ₽</a>
           </p>
         </li>
@@ -122,6 +115,7 @@
     </section>
     <section class="brands">
       <h2>Популярные производители:</h2>
+      <a class="full-list" href="Все производители"></a>
       <ul class="brands-list">
         <li class="brands-list-item"><a href="">Bosch</a></li>
         <li class="brands-list-item"><a href="">Makita</a></li>
@@ -136,13 +130,19 @@
         <h2>Сервисы</h2>
         <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        <span class="slider"></span>
-        <!--здесь будет слайдер-->
+        <ul class="services-list">
+          <li class="services-list-item active">Доставка</li>
+          <li class="services-list-item">Гарантия</li>
+          <li class="services-list-item">Кредит</li>
+        </ul>
+        <h2>Доставка</h2>
+        <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!<br>
+          Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+        <img src="img/truck.jpeg" alt="Грузовик">
       </section>
       <section class="delivery">
-        <h2 class="visually-hidden">Доставка</h2>
         <div class="delivery-services">
-          <h3>Компания «Техномарт»</h3>
+          <h2>Компания «Техномарт»</h2>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит
             равнодушными любителей сэкономить на гастарбайтерах.</p>
           <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
@@ -155,10 +155,10 @@
           <a href="#" class="about-us">Подробнее о компании</a>
         </div>
         <div class="delivery-self">
-          <h3>Контакты</h3>
+          <h2>Контакты</h2>
           <p>Вы можете забрать товар сами,<br>
             заехав в наш офис:</p>
-          <a href="map.jpg"><img src="" alt="Как добраться"></a>
+          <a href="map.jpg"><img src="img/map.jpeg" alt="Как добраться"></a>
           <span class="got-lost">Заблудились? Напишите нам!</span> <!-- здесь будет кнопка и вызов модального окна-->
         </div>
       </section>
