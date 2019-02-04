@@ -12,7 +12,11 @@
       <section class="navigation-bar">
         <h2 class="visually-hidden">Верхнее меню</h2>
         <h1><a href="#">Техномарт</a></h1>
-        <span>Поиск</span> <!-- здесь будет форма поиска-->
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+          <label for="search-header">Поиск:
+            <input type="search" name="search-header" id="search-header">
+          </label>
+        </form>
         <a href="#">Закладки</a>
         <a href="#">Корзина</a>
         <a href="#">Оформить заказ</a>
@@ -22,16 +26,11 @@
         <a href="tel:+78125550555">+7(812)555-05-55</a>
         <address>г.Санкт-Петеррбург, гл. Б. Конюшенная, д. 19/8</address>
       </p>
-      <p class="navigation-login">
-        <ul class="not-logged-in">
-          <!-- на лекции про Барбершоп сказали не делать ссылку, а оставить так пока что. На 4-й лекции расскажут, как правильно сделать-->
-          <li class="login-link">Вход</li>
-          <li class="registration-link">Регистрация</li>
-        </ul>
-        <ul class="logged-in">
-          <li class="logout-link"></li> <!-- Здесь будут форма выхода и смены пользователя -->
-          <li class="my-orders-link"><a href="#">Мои заказы</a></li>
-          <li class="my-technomart-link"><a href="#">Личный кабинет</a></li>
+      <p class="navigation-logged">
+        <ul>
+          <li><a class="logout-link" href="logout.html">Равшан Джамшутович</a></li>
+          <li class="my-orders-link"><a href="orders.html">Мои заказы</a></li>
+          <li class="my-account-link"><a href="account.html">Личный кабинет</a></li>
         </ul>
       </p>
       <ul class="site-navigation">
@@ -58,26 +57,66 @@
     <h1>Перфораторы</h1>
 
     <section class="filters">
-      <h2 class="visually-hidden">Фильтры</h2>
-      <span class="filters-price"></span> <!--здесь будет фильтр по цене-->
-      <ul class="brands-list">
-        <li class="brands-list-item checked">Bosch</li>
-        <li class="brands-list-item" >Интерскол</li>
-        <li class="brands-list-item checked">Makita</li>
-        <li class="brands-list-item">DeWalt</li>
-        <li class="brands-list-item">Hitachi</li>
-      </ul>
-      <ul class="power">
-        <li class="checked">Аккумуляторные</li>
-        <li>Сетевые</li>
-      </ul>
+      <h2>Фильтр</h2>
+      <form class="filter-form" action="https://echo.htmlacademy.ru" method="post" oninput="">
+        <!-- <label>
+          <!--<h3>Цена</h3>
+          <input class="filter-price" type="range" name="price"  min="0" max="100000" step="1" value="10000, 30000">
+
+        </label> -->
+
+        <fieldset>
+          <legend>Производители</legend>
+          <ul class="brands-list">
+            <li class="filter-option">
+              <input class="filter-input fliter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
+              <label for="filter-bosch">Bosch</label>
+            </li>
+            <li class="filter-option">
+              <input class="filter-input fliter-input-checkbox" type="checkbox" name="interskol" id="filter-interskol">
+              <label for="filter-interskol">Интерскол</label>
+            </li>
+            <li class="filter-option">
+              <input class="filter-input fliter-input-checkbox" type="checkbox" name="makita" id="filter-makita"
+                checked>
+              <label for="filter-makita">Makita</label>
+            </li>
+            <li class="filter-option">
+              <input class="filter-input fliter-input-checkbox" type="checkbox" name="dewalt" id="filter-dewalt">
+              <label for="filter-dewalt">DeWalt</label>
+            </li>
+            <li class="filter-option">
+              <input class="filter-input fliter-input-checkbox" type="checkbox" name="hithachi" id="filter-hitachi">
+              <label for="filter-hitachi">Hitachi</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Питание:</legend>
+          <ul class="power-list">
+            <li class="filter-option">
+              <input class="filter-input filter-input-radio" type="radio" name="power" id="filter-battery" value="battery" checked>
+              <label for="filter-battery">Аккумуляторные</label>
+            </li>
+            <li class="filter-option">
+              <input class="filter-input filter-input-radio" type="radio" name="power" id="filter-ground" value="ground">
+              <label for="filter-ground">Сетевые</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="filter-button button">Показать</button>
+      </form>
     </section>
     <section class="sorting">
       <h2>Сортировка</h2>
       <ul class="sorting-list">
-        <li class="sorting-list-item active">по цене</li>
-        <li class="sorting-list-item ">по типу</li>
-        <li class="sorting-list-item ">по функционалу</li>
+        <li class="sorting-list-item active"><a class="sorting-property-link" href="#">по цене</a></li>
+        <li class="sorting-list-item "><a class="sorting-property-link" href="#">по типу</a></li>
+        <li class="sorting-list-item "><a class="sorting-property-link" href="#">по функционалу</a></li>
+      </ul>
+      <ul>
+        <li><a class="sortind-direction-link" href="#">По возрастанию</a></li>
+        <li><a class="sortind-direction-link" href="#">По убыванию</a></li>
       </ul>
     </section>
     <section class="catalog">
@@ -264,7 +303,13 @@
           <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a></p>
       </section>
     </footer>
-
+<section class="modal modal-add-to-cart">
+  <h2>Товар добавлен в корзину!</h2>
+  <p>
+    <a class="button button-cart" href="#">Оформить заказ</a>
+    <a class="button button-cart" href="#">Продолжить покупки</a>
+  </p>
+</section>
   </main>
 </body>
 

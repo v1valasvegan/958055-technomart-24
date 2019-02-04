@@ -12,7 +12,11 @@
       <section class="navigation-bar">
         <h2 class="visually-hidden">Верхнее меню</h2>
         <h1><a href="#">Техномарт</a></h1>
-        <span>Поиск</span><!-- здесь будет форма поиска-->
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+          <label for="search-header">Поиск:
+          <input type="search" name="search-header" id="search-header">
+        </label>
+        </form>
         <a href="#">Закладки</a>
         <a href="#">Корзина</a>
         <a href="#">Оформить заказ</a>
@@ -22,11 +26,14 @@
         <a href="tel:+78125550555">+7(812)555-05-55</a>
         <address>г.Санкт-Петербург, гл. Б. Конюшенная, д. 19/8</address>
       </p>
-      <p class="navigation-login">
+      <p class="navigation-user">
         <ul>
-          <!-- на лекции про Барбершоп сказали не делать ссылку, а оставить так пока что. На 4-й лекции расскажут, как правильно сделать-->
-          <li class="login-link">Вход</li>
-          <li class="registration-link">Регистрация</li>
+          <li>
+            <a class="login-link" href="login.html">Вход</a>
+          </li>
+          <li>
+            <a class="registration-link" href="registration.html">Регистрация</a>
+          </li>
         </ul>
       </p>
       <ul class="site-navigation">
@@ -165,7 +172,7 @@
           <p>Вы можете забрать товар сами,<br>
             заехав в наш офис:</p>
           <a href="map.jpg"><img src="img/map.jpg" alt="Как добраться"></a>
-          <span class="got-lost">Заблудились? Напишите нам!</span><!-- здесь будет кнопка и вызов модального окна-->
+          <a class="got-lost" href="write-us">Заблудились? Напишите нам!</a>
         </div>
       </section>
     </section>
@@ -209,6 +216,31 @@
         <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a></p>
     </section>
   </footer>
+  <section class="modal-write-us">
+    <h2 class="visually-hidden">Форма связи</h2>
+    <form class="write-us-form" action="https://echo.htmlacademy.ru" method="POST">
+    <p>
+      <label for="name-write-us">Ваше имя:</label>
+      <input class="name-icon-write-us" type="text" name="name" id="name-write-us" placeholder="Имя Фамилия">
+    </p>
+    <p>
+      <label for="email-write-us">Ваш e-mail:</label>
+      <input class="email-icon-write-us" type="email" name="email" id="email-write-us" placeholder="email@example.com" >
+    </p>
+    <p>
+      <label for="letter-write-us">Текст письма:</label>
+      <textarea class="letter-icon-write-us" name="letter" id="letter-write-us" placeholder="В свободной форме"></textarea>
+    </p>
+    </form>
+  </section>
+  <section class="modal-map">
+    <h2 class="visually-hidden">
+      Как добраться
+    </h2>
+<p>
+  <img src="img/map.jpg" width="940px" height="446px" alt="Офис компании по адресу ул. Б. Конюшенная 19/8, Санкт-Петербург">
+</p>
+  </section>
 
 </body>
 
