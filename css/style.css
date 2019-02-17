@@ -236,9 +236,9 @@ input[type="radio"].visually-hidden {
   background-color: #f4f7f9;
 }
 
-.main-navigation .login-link,
-.main-navigation .registration-link,
-.main-navigation .logout-link {
+.main-header .login-link,
+.main-header .registration-link,
+.main-header .logout-link {
   font-size: 21px;
   line-height: 21px;
 
@@ -246,26 +246,26 @@ input[type="radio"].visually-hidden {
   background-color: #fff;
 }
 
-.main-navigation .login-link:hover,
-.main-navigation .registration-link:hover,
-.main-navigation .login-link:focus,
-.main-navigation .registration-link:focus {
+.main-header .login-link:hover,
+.main-header .registration-link:hover,
+.main-header .login-link:focus,
+.main-header .registration-link:focus {
   color: #ee3643;
   background-color: #fff;
 }
 
-.main-navigation .logout-link:hover .user-icon path,
-.main-navigation .logout-link:focus .user-icon path,
-.main-navigation .logout-link:hover .logout-icon path,
-.main-navigation .logout-link:focus .logout-icon path,
-.main-navigation .login-link:hover .login-icon path,
-.main-navigation .login-link:focus .login-icon path {
+.main-header .logout-link:hover .user-icon path,
+.main-header .logout-link:focus .user-icon path,
+.main-header .logout-link:hover .logout-icon path,
+.main-header .logout-link:focus .logout-icon path,
+.main-header .login-link:hover .login-icon path,
+.main-header .login-link:focus .login-icon path {
   fill: #32425c;
 }
 
-.main-navigation .logout-link:active,
-.main-navigation .login-link:active,
-.main-navigation .registration-link:active {
+.main-header .logout-link:active,
+.main-header .login-link:active,
+.main-header .registration-link:active {
   opacity: 0.3;
 }
 
@@ -691,16 +691,53 @@ input[type="radio"].visually-hidden {
   color: rgba(50, 66, 92, 0.3);
 }
 
+.breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  min-height: 59px;
+
+  list-style: none;
+  margin: 0;
+}
+
 .breadcrumbs,
 .breadcrumbs a {
   font-family: "PT Sans";
   font-size: 13px;
   line-height: 18px;
+  text-transform: uppercase;
 
   color: #000;
+}
 
-  list-style: none;
+h1.inner-page {
+  font-family: "Cuprum";
+  font-size: 30px;
+  line-height: 30px;
+
+  min-height: 89px;
   margin: 0;
+
+  color: #32425c;
+  background-color: #f2f6f8;
+
+}
+
+.wrapper-shop {
+  display: flex;
+  justify-content: space-between;
+
+  height: 1370px;
+}
+
+.filters {
+  width: 220px;
+  height: 100%;
+}
+
+.wrapper-shop .content {
+display: flex;
+min-width: 700px;
 }
 
 .home-icon {
@@ -713,6 +750,7 @@ input[type="radio"].visually-hidden {
 }
 
 .about-item {
+  min-height: 261px;
   background-color: #f4f7f9;
 }
 
@@ -732,3 +770,4 @@ input[type="radio"].visually-hidden {
 
   color: #000;
 }
+
