@@ -22,6 +22,7 @@ a {
   border: 0;
   padding: 0;
 
+
   white-space: nowrap;
 
   clip-path: inset(100%);
@@ -30,11 +31,17 @@ a {
 }
 
 .red-button {
-  font-family: "PT Sans";
+  display: inline-block;
+
+  height: 38px;
+  font-family: "Cuprum", sans-serif;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 38px;
   text-transform: uppercase;
   text-align: center;
+  vertical-align: middle;
+  border: 0 solid transparent;
+  border-radius: 3px;
 
   color: #fff;
   background-color: #ee3643;
@@ -395,7 +402,7 @@ a.header-top-item {
 .header-site-navigation {
   margin-top: 38px;
 
-  font-family: "Cuprum";
+  font-family: "Cuprum", sans-serif;
   font-size: 17px;
   line-height: 17px;
 
@@ -476,61 +483,185 @@ a.header-top-item {
 }
 
 .promo {
-  min-height: 541px;
 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin-top: 60px;
+  margin-bottom: 33px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.promo .left-column {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+width: 620px;
+}
+
+.promo .right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.promo-item {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 300px;
+  height: 123px;
+  padding: 22px 25px;
+  margin-bottom: 20px;
+
+  color: #fff;
+}
+
+.promo-item h3 {
+
+  margin: 0;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 24px;
   line-height: 30px;
 }
 
-.promo ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  list-style: none;
-  margin: 0;
-}
-
-.promo-item {
-  color: #fff;
-}
-
 .promo-item a {
+  display: inline-block;
+  vertical-align: middle;
+
+  width: 135px;
+  height: 38px;
+  margin-top: 14px;
+
+
+  font-family: "Cuprum", sans-serif;
   font-size: 14px;
-  line-height: 18px;
-  text-align: center;
+  line-height: 38px;
   text-transform: uppercase;
+  text-align: center;
 
   color: inherit;
-}
-
-.promo-item:nth-of-type(1) {
-  background-color: #ffbf47;
-}
-
-.promo-item a {
   background-color: rgb(0, 0, 0, 0.1);
 }
 
-.promo-item:nth-of-type(2) {
+.promo-item.new h3:before {
+position: absolute;
+right: 0;
+top: 0;
+
+width: 60px;
+height: 60px;
+
+background-image: url("../img/new-flag.png");
+background-repeat: no-repeat;
+background-position: center center;
+content: "";
+}
+
+.promo-item.first h3:after {
+  position: absolute;
+  left: 213px;
+  top: 31px;
+
+  width: 44px;
+  height: 65px;
+
+  background-image: url("../img/icon-1.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  content: "";
+}
+
+.promo-item.second h3:after {
+  position: absolute;
+  left: 197px;
+  top: 33px;
+
+  width: 75px;
+  height: 61px;
+
+  background-image: url("../img/icon-2.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  content: "";
+}
+
+.promo-item.third h3:after {
+  position: absolute;
+  left: 191px;
+  top: 31px;
+
+  width: 78px;
+  height: 62px;
+
+  background-image: url("../img/icon-3.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  content: "";
+}
+
+.promo-item.fourth h3:after {
+  position: absolute;
+  left: 196px;
+  top: 26px;
+
+  width: 59px;
+  height: 72px;
+
+  background-image: url("../img/icon-4.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  content: "";
+}
+
+.promo-item.fifth h3:after {
+  position: absolute;
+  left: 191px;
+  top: 32px;
+
+  width: 78px;
+  height: 63px;
+
+  background-image: url("../img/icon-5.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  content: "";
+}
+
+.promo-item.first {
+  background-color: #ffbf47;
+}
+
+.promo-item.second {
   background-color: #3bbce3;
 }
 
-.promo-item:nth-of-type(3) {
+.promo-item.third {
   background-color: #dc91d8;
 }
 
-.promo-item:nth-of-type(4) {
+.promo-item.fourth {
   background-color: #8ed78f;
 }
 
-.promo-item:nth-of-type(5) {
+.promo-item.fifth {
   background-color: #ffc047;
 }
 
 .promo-item.slider {
+  width: 620px;
+  height: 266px;
+  padding: 0;
+
   background-color: gray;
+
 }
 
 .promo-item a:hover,
@@ -542,15 +673,20 @@ a.header-top-item {
   opacity: 0.3;
 }
 
-.popular-items {
-  height: 448px;
-}
+/* .popular-items {
+  padding-top: 20px;
+} */
 
 .popular-items-header,
 .brands-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  padding-left: 30px;
+  padding-right: 24px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
 
   min-height: 89px;
   background-color: #f9f5f0;
@@ -558,61 +694,109 @@ a.header-top-item {
 
 .popular-items-header h2,
 .brands-header h2 {
-  font-family: "Cuprum";
+  margin: 0;
+
+  font-family: "Cuprum", sans-serif;
   font-size: 30px;
+  line-height: 30px;
   text-transform: uppercase;
+  font-weight: normal;
 
   color: #32425c;
 }
 
 .popular-items-header a,
 .brands-header a {
-  font-family: "Cuprum";
+  display: inline-block;
+  width: 253px;
+  height: 38px;
+
+
+  font-family: "Cuprum", sans-serif;
   font-size: 14px;
+  line-height: 38px;
   text-transform: uppercase;
   text-align: center;
+  vertical-align: middle;
 
   color: #fff;
   background-color: #ee3643;
 }
 
-.catalog-item-list,
-.brands-item-list {
+.catalog-item-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 .catalog-item {
+  position: relative;
+
   display: inline-block;
+  border: 1px solid #eaeaea;
+  width: 218px;
+  margin-bottom: 20px;
+
   font-family: "PT Sans";
   text-align: center;
 
   background-color: #fff;
-  border: 1px solid #eaeaea;
 }
 
 .catalog-item h3 {
+  min-height: 40px;
+  padding: 0 25px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+
   font-size: 18px;
   line-height: 20px;
-  font-weight: 700;
+  font-weight: bold;
 
   color: #000;
   background-color: #fff;
 }
 
+.catalog-item-image {
+  margin: 0;
+  padding-left: -32px;
+}
+
+
 .catalog-item .item-price-old {
+  min-height: 20px;
+  /* margin-top: 5px; */
+  margin-bottom: 10px;
+
   color: #a9a9a9;
   text-decoration: line-through;
 }
 
-.catalog-item .button.price {
-  display: block;
-  width: 141px;
-  height: 38px;
+.catalog-item .item-price {
+  position: relative;
+
+  width: 80px;
+  margin: 10px auto 20px auto;
+  padding: 10px 30px;
+
   color: #fff;
-  background-image: url("../img/red-button.svg");
+  background: #ee3643;
+  border-radius: 3px;
+}
+
+.catalog-item .item-price:after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 0;
+
+  width: 0;
+  height: 0;
+
+  border: 20px solid white;
+  border-left-color: transparent;
 }
 
 .catalog-item.new::after {
@@ -622,29 +806,126 @@ a.header-top-item {
   background-image: url("../img/new-flag.png");
 }
 
-.catalog-item-hover {
-  display: none;
+.catalog-item-actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* display: none; */
+  width: 218px;
+  height: 88px;
+  padding: 40px 0;
+
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
 }
 
 .catalog-item:hover {
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
-.catalog-item:hover img {
-  display: none;
-}
-
-.catalog-item:hover .catalog-item-hover {
+.catalog-item:hover .catalog-item-actions,
+.catalog-item:focus .catalog-item-actions {
   display: block;
 }
 
-.brands {
-  height: 504px;
+.catalog-item-actions .button {
+  position: relative;
+
+  display: block;
+  width: 129px;
+  margin: 0 auto 7px auto;
+  padding: 7px 0;
+
+  background-color: #63a63e;
+  border: 3px solid #63a63e;
+  border-bottom-color: #367315;
+  border-radius: 3px;
+
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Cuprum", sans-serif;
+  line-height: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-.brands-list-item {
-  border: 1px solid #eaeaea;
+.catalog-item-actions .bookmark {
+  color: #32425c;
+  background: #fff;
+  border-bottom-color: #63a63e;
 }
+
+.catalog-item-actions .buy::after {
+  content: "";
+
+  position: absolute;
+  top: 7px;
+  right: 105px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icon-cart.svg");
+  opacity: 0.3;
+}
+
+.catalog-item-actions .buy:hover,
+.catalog-item-actions .buy:focus {
+background-color: #5fbb2d;
+}
+
+.catalog-item-actions .buy:hover::after,
+.catalog-item-actions .buy:focus::after {
+  opacity: 1;
+}
+
+.catalog-item-actions .buy:active {
+  background-color: #367315;
+  border-color: #367315;
+}
+
+.catalog-item-actions .bookmark:hover,
+.catalog-item-actions .bookmark:focus {
+  border-color: #32425c;
+}
+
+.catalog-item-actions .bookmark:active {
+  border-color: #32425c;
+  opacity: 0.3;
+}
+
+.brands {
+  padding-bottom: 65px;
+}
+
+.brands-item-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+
+  .brands-list-item {
+    width: 220px;
+    height: 145px;
+    border: 1px solid #eaeaea;
+    margin-bottom: 20px;
+
+}
+
+.brands-list-item a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.brands-list-item a img {
+  margin: auto;
+}
+
 
 .brands-list-item a:hover,
 .brands-list-item a:focus {
@@ -656,14 +937,16 @@ a.header-top-item {
 }
 
 .services {
-  height: 522px;
+  min-height: 522px;
+  padding-top: 68px;
 
   background-color: #f4f7f9;
 }
 
 .services h2 {
-  font-family: "Cuprum";
+  font-family: "Cuprum", sans-serif;
   font-size: 30px;
+  font-weight: normal;
   line-height: 30px;
   text-transform: uppercase;
 
@@ -672,8 +955,18 @@ a.header-top-item {
   margin: 0;
 }
 
+.services p {
+  margin-top:25px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+
+  color: #000;
+  background-color: #f4f7f9;
+}
+
 .services h3 {
-  font-family: "Cuprum";
+  font-family: "Cuprum", sans-serif;
   font-size: 36px;
   line-height: 36px;
   text-transform: uppercase;
@@ -685,36 +978,71 @@ a.header-top-item {
   display: flex;
   justify-content: space-between;
   min-height: 536px;
+  padding-top: 82px;
 
   background-color: #fff;
 }
 
 .delivery p {
-  font-family: "PT Sans";
+  margin-top:25px;
+  font-family: "PT Sans", sans-serif;
   font-size: 13px;
   line-height: 24px;
+  margin-bottom: 20px;
 
   color: #000;
   background-color: #fff;
 }
 
-.delivery ul {
+.delivery-list {
   list-style: none;
-  margin: p;
+  margin-bottom: 37px;
+  padding-left: 38px;
 }
 
-.delivery-services h3 {
-  font-family: "Cuprum";
+.delivery-services h3,
+.delivery-self h3 {
+  font-family: "Cuprum", sans-serif;
   font-size: 30px;
   line-height: 30px;
+  font-weight: normal;
   text-transform: uppercase;
+  margin: 0;
 
   color: #000;
   background-color: #fff;
+}
+
+.delivery-services {
+  width: 520px;
+}
+
+.delivery-self {
+  width: 300px;
+}
+
+.delivery-list-item {
+  margin-bottom: 17px;
+}
+
+.delivery-list-item {
+  position: relative;
+}
+
+.delivery-list-item::before {
+  content: "";
+  width: 25px;
+  height: 2px;
+
+  position: absolute;
+  left: -38px;
+  top: 9px;
+
+  background-color: #ee3643;
 }
 
 .delivery-list-item a {
-  font-family: "Cuprum";
+  font-family: "Cuprum", sans-serif;
   font-size: 18px;
   line-height: 20px;
 
@@ -722,8 +1050,21 @@ a.header-top-item {
   background-color: #fff;
 }
 
+.delivery-services .red-button {
+  width: 220px;
+}
+
+.delivery-self .red-button {
+  width: 300px;
+}
+
+.delivery-self img {
+  margin-top: 8px;
+  margin-bottom: 37px;
+}
+
 .footer-navigation {
-  font-family: "Cuprum";
+  font-family: "Cuprum", sans-serif;
   font-size: 18px;
   line-height: 24px;
   background-color: #32425c;
@@ -794,7 +1135,7 @@ a.header-top-item {
   justify-content: space-between;
   min-height: 107px;
 
-  font-family: "Cuprum";
+  font-family: "Cuprum", sans-serif;
   font-size: 16px;
   line-height: 18px;
 
@@ -880,7 +1221,7 @@ a.header-top-item {
 }
 
 h1.inner-page {
-  font-family: "Cuprum";
+  font-family: "Cuprum", sans-serif;
   font-size: 30px;
   line-height: 30px;
 
@@ -923,7 +1264,7 @@ h1.inner-page {
 }
 
 .about-item h2 {
-  font-family: "Cuprum";
+  font-family: "Cuprum", sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
