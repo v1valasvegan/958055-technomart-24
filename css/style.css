@@ -1036,7 +1036,7 @@ a.header-top-item {
   background-image: url("../img/service-menu-border.png");
   background-repeat: no-repeat;
   opacity: 1;
-  z-index: 10;
+  z-index: 1;
 }
 
 .services .red-button {
@@ -1798,3 +1798,146 @@ h1.inner-page {
 
   color: #000;
 }
+
+/* .modal-map {
+
+} */
+.modal-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal {
+  position: fixed;
+  margin: auto;
+  border-top: 7px solid #ee3643;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
+  z-index: 2;
+  background-color: #fff;
+  color: #000;
+}
+
+.modal-write-us {
+  box-sizing: border-box;
+  width: 620px;
+  height: 430px;
+
+
+  font-family: "Cuprum", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+
+}
+
+.modal-top {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px 80px 35px 80px;
+}
+
+.modal-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 80px;
+  background-color: #f4f4f4;
+}
+
+.modal-close {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+
+  width: 21px;
+  height: 21px;
+
+  font-size: 0;
+
+  border: 0;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.modal-close::after,
+.modal-close::before {
+  position: absolute;
+  right: -1px;
+  top: 8px;
+
+  content: "";
+  width: 25px;
+  height: 4px;
+
+  background-color: #ee3643;
+}
+
+.modal-close::after {
+  transform: rotate(45deg);
+}
+
+.modal-close::before {
+  transform: rotate(-45deg)
+}
+
+.write-us-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.write-us-form p {
+  margin: 20px 0 0 0;
+}
+
+.write-us-form label {
+  font-family: "Cuprum", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+
+  color: #000;
+  background-color: #fff;
+}
+
+.write-us-form input,
+.write-us-form textarea {
+  box-sizing: border-box;
+  margin-top: 10px;
+  border: 2px solid #dee3e4;
+  border-radius: 3px;
+  padding: 10px 15px;
+
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+}
+
+.write-us-form input {
+  width: 220px;
+}
+
+.write-us-form textarea {
+  width: 460px;
+}
+
+.modal-write-us .red-button {
+  width: 460px;
+}
+
+.modal-cart h1 {
+  font-family: "Cuprum", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.modal-cart .modal-top {
+  padding: 65px 125px 70px 180px;
+}
+
