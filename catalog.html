@@ -59,7 +59,7 @@
             <a class="header-top-item second" href="#">
               Закладки: 0
             </a>
-            <a class="header-top-item third" href="#">
+            <a class="header-top-item third active" href="#">
               Корзина: 10
             </a>
             <a class="header-top-item fourth" href="#">
@@ -575,7 +575,9 @@
           </div>
         </section>
       </footer>
-    <section class="modal modal-add-to-cart">
+
+      <div class="modal-wrapper">
+      <section class="modal modal-add-to-cart">
       <h2>Товар добавлен в корзину!</h2>
       <p>
         <a class="button button-cart" href="#">Оформить заказ</a>
@@ -583,14 +585,59 @@
       </p>
     </section>
 
-    <div class="modal-wrapper">
       <section class="modal modal-cart">
         <div class="modal-top">
           <h1>Товар добавлен в корзину!</h1>
         </div>
-        <div class="modal-bottom"><button class="red-button">оформить заказ</button><button class="white-button">продолжить покупки</button></div>
-        <button class="modal-close"></button>
+        <div class="modal-bottom"><button class="button red-button">оформить заказ</button><button class="button white-button">продолжить покупки</button></div>
+        <button class="modal modal-close"></button>
       </section>
     </div>
+
+    <script>
+      var link = document.querySelectorAll(".buy");
+      var popup = document.querySelector(".modal-wrapper");
+      var close = popup.querySelector(".modal-close");
+
+      link.forEach(function(item) {
+      item.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+      });
+      });
+
+      close.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        popup.classList.remove("modal-show");
+      });
+
+      form.addEventListener("submit", function(evt) {
+        if (!emailWriteUs.value || !nameWriteUs.value) {
+          evt.preventDefault();
+          popup.classList.remove("modal-error");
+          popup.offsetWidth = popup.offsetWidth;
+          popup.classList.add("modal-error")
+        } else {
+          if (isStorageSupport) {
+            localStorage.setItem(
+              "nameWriteUs",
+              nameWriteUs.value);
+            localStorage.setItem ("emailWriteUs",
+              emailWriteUs.value
+            );
+          }
+        }
+      });
+
+      window.addEventListener("keydown", function (evt) {
+if (evt.keyCode ===27) {
+  evt.preventDefault();
+  if (popup.classList.contains("modal-show")) {
+    popup.classList.remove("modal-show");
+    popup.classList.remove("modal-error");
+  }
+}
+      })
+    </script>
   </body>
 </html>

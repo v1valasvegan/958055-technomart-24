@@ -1,0 +1,113 @@
+.slider-container {
+  position: relative;
+  width: 620px;
+  height: 266px;
+}
+
+.slider-container > input {
+  display: none;
+}
+
+.slider,
+.slider-image {
+  width: inherit;
+  height: inherit;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  background-color: grey;
+}
+
+.slider-image {
+  position: absolute;;
+  box-sizing: border-box;
+  padding: 25px;
+  color:#fff;
+  opacity: 0;
+
+}
+
+.slider-image h3 {
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+.slider-image p {
+  margin: 0;
+  font-family: "Cuprum", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.slider-image .red-button {
+  margin-top: 125px;
+  width: 195px;
+}
+
+.slider-image-1 {
+  background-image: url("../img/slide1.png");
+}
+
+.slider-image-2 {
+  background-image: url("../img/slide2.png");
+}
+
+.slider-input-1:checked ~ .slider .slider-image-1,
+.slider-input-2:checked ~ .slider .slider-image-2 {
+opacity: 1;
+}
+
+.controls {
+  position: absolute;
+  bottom: 35px;
+  left: 295px;
+}
+
+.controls label {
+  display: block;
+  box-sizing: border-box;
+  height: 10px;
+  width: 10px;
+  float: left;
+  margin-right: 12px;
+  border: 0px solid #fff;
+  border-radius: 50%;
+
+  background-color: #fff;
+
+  cursor: pointer;
+}
+
+.slider-input-1:checked ~ .controls label:nth-of-type(1),
+.slider-input-2:checked ~ .controls label:nth-of-type(2) {
+  background-color: #ee3643;
+  border-width: 2px;
+}
+
+.side-controls label {
+  position: absolute;
+  top: 114px;
+  display: block;
+  width: 22px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.slider-input-1:checked ~ .side-controls label:nth-of-type(3),
+.slider-input-2:checked ~ .side-controls label:nth-of-type(1) {
+  left: 25px;
+  background-image: url("../img/icon-left.svg");
+}
+
+.slider-input-1:checked ~ .side-controls label:nth-of-type(4),
+.slider-input-2:checked ~ .side-controls label:nth-of-type(2) {
+  right: 20px;
+  background-image: url("../img/icon-right.svg");
+}
