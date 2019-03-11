@@ -11,8 +11,9 @@
       href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i&amp;subset=cyrillic"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
   </head>
 
   <body>
@@ -111,15 +112,15 @@
       </div>
       <nav class="header-site-navigation container">
         <ul class="navigation-item-list">
-          <li><a class="navigation-list-item" href="#">Главная</a></li>
-          <li><a class="navigation-list-item" href="#">Компания</a></li>
+          <li><a class="navigation-list-item first" href="#">Главная</a></li>
+          <li><a class="navigation-list-item second" href="#">Компания</a></li>
           <li>
-            <a class="navigation-list-item" href="catalog.html">Каталог</a>
+            <a class="navigation-list-item third" href="catalog.html">Каталог</a>
           </li>
-          <li><a class="navigation-list-item" href="#">Новости</a></li>
-          <li><a class="navigation-list-item" href="#">Спецпредложения</a></li>
-          <li><a class="navigation-list-item" href="#">Доставка</a></li>
-          <li><a class="navigation-list-item" href="#">Контакты</a></li>
+          <li><a class="navigation-list-item fourth" href="#">Новости</a></li>
+          <li><a class="navigation-list-item fifth" href="#">Спецпредложения</a></li>
+          <li><a class="navigation-list-item sixth" href="#">Доставка</a></li>
+          <li><a class="navigation-list-item seventh" href="#">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -361,7 +362,7 @@
             type="radio"
             name="service-menu"
             id="menu-tab-delivery"
-            class="services-menu"
+            class="services-menu menu-tab-delivery"
             checked
           />
           <label for="menu-tab-delivery">Доставка</label>
@@ -369,14 +370,14 @@
             type="radio"
             name="service-menu"
             id="menu-tab-warranty"
-            class="services-menu"
+            class="services-menu menu-tab-warranty"
           />
           <label for="menu-tab-warranty">Гарантия</label>
           <input
             type="radio"
             name="service-menu"
             id="menu-tab-credit"
-            class="services-menu"
+            class="services-menu menu-tab-credit"
           />
           <label for="menu-tab-credit">Кредит</label>
           <section class="tab delivery-tab">
@@ -458,6 +459,7 @@
       <nav class="footer-navigation wrapper">
         <section class="site-navigation container">
           <div class="logo-image-wrapper">
+            <h2 class="visually-hidden">Навигация по сайту</h2>
             <img
               src="img/logo-technomart.svg"
               width="138"
@@ -480,6 +482,7 @@
             г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8<br />
             +7 (812) 555-05-55
           </address>
+          <h2 class="visually-hidden">Навигаци по мазазину</h2>
           <ul class="shop-navigation-item-list">
             <li class="shop-navigation-list-item"><a href="#">Материалы</a></li>
             <li class="shop-navigation-list-item"><a href="#">Техника</a></li>
@@ -585,6 +588,7 @@
                 name="name"
                 id="name-write-us"
                 placeholder="Имя Фамилия"
+                required
               />
             </p>
             <p>
@@ -595,6 +599,7 @@
                 name="email"
                 id="email-write-us"
                 placeholder="email@example.com"
+                required
               />
             </p>
             <p>
@@ -615,69 +620,6 @@
         </form>
       </section>
     </div>
-
-    <script>
-      var link = document.querySelector(".write-us-link");
-      var popup = document.querySelector(".modal-wrapper");
-      var close = popup.querySelector(".modal-close");
-      var form = popup.querySelector(".write-us-form");
-      var nameWriteUs = popup.querySelector(".name-icon-write-us");
-      var emailWriteUs = popup.querySelector(".email-icon-write-us");
-      var letterWriteUs = popup.querySelector(".letter-icon-write-us");
-      var isStorageSupport = true;
-      var storage;
-
-      try {
-        storage = localStorage.getItem("nameWriteUs");
-      } catch (err) {
-        isStorageSupport = false;
-      }
-
-      link.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        popup.classList.add("modal-show");
-        if (storage) {
-          nameWriteUs.value = storage;
-          emailWriteUs.value = localStorage.getItem("emailWriteUs");
-          setTimeout(function() {letterWriteUs.focus()}, 1000);
-        } else {
-           nameWriteUs.focus();
-        }
-      });
-
-      close.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        popup.classList.remove("modal-show");
-        popup.classList.remove("modal-error");
-      });
-
-      form.addEventListener("submit", function(evt) {
-        if (!emailWriteUs.value || !nameWriteUs.value) {
-          evt.preventDefault();
-          popup.classList.remove("modal-error");
-          popup.offsetWidth = popup.offsetWidth;
-          popup.classList.add("modal-error")
-        } else {
-          if (isStorageSupport) {
-            localStorage.setItem(
-              "nameWriteUs",
-              nameWriteUs.value);
-            localStorage.setItem ("emailWriteUs",
-              emailWriteUs.value
-            );
-          }
-        }
-      });
-
-      window.addEventListener("keydown", function (evt) {
-if (evt.keyCode ===27) {
-  evt.preventDefault();
-  if (popup.classList.contains("modal-show")) {
-    popup.classList.remove("modal-show");
-    popup.classList.remove("modal-error");
-  }
-}
-      })
-    </script>
+    <script src="js/script-index.js" async></script>
   </body>
 </html>

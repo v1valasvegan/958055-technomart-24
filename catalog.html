@@ -11,8 +11,8 @@
       href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i&amp;subset=cyrillic"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body class="catalog-inner-page">
@@ -466,6 +466,7 @@
         <nav class="footer-navigation wrapper">
           <section class="site-navigation container">
             <div class="logo-image-wrapper">
+              <h2 class="visually-hidden">Навигация по сайту</h2>
               <img
                 src="img/logo-technomart.svg"
                 width="138"
@@ -488,6 +489,7 @@
               г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8<br />
               +7 (812) 555-05-55
             </address>
+            <h2 class="visually-hidden">Навигация по магазину</h2>
             <ul class="shop-navigation-item-list">
               <li class="shop-navigation-list-item"><a href="#">Материалы</a></li>
               <li class="shop-navigation-list-item"><a href="#">Техника</a></li>
@@ -587,57 +589,13 @@
 
       <section class="modal modal-cart">
         <div class="modal-top">
-          <h1>Товар добавлен в корзину!</h1>
+          <h2>Товар добавлен в корзину!</h2>
         </div>
         <div class="modal-bottom"><button class="button red-button">оформить заказ</button><button class="button white-button">продолжить покупки</button></div>
         <button class="modal modal-close"></button>
       </section>
     </div>
 
-    <script>
-      var link = document.querySelectorAll(".buy");
-      var popup = document.querySelector(".modal-wrapper");
-      var close = popup.querySelector(".modal-close");
-
-      link.forEach(function(item) {
-      item.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        popup.classList.add("modal-show");
-      });
-      });
-
-      close.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        popup.classList.remove("modal-show");
-      });
-
-      form.addEventListener("submit", function(evt) {
-        if (!emailWriteUs.value || !nameWriteUs.value) {
-          evt.preventDefault();
-          popup.classList.remove("modal-error");
-          popup.offsetWidth = popup.offsetWidth;
-          popup.classList.add("modal-error")
-        } else {
-          if (isStorageSupport) {
-            localStorage.setItem(
-              "nameWriteUs",
-              nameWriteUs.value);
-            localStorage.setItem ("emailWriteUs",
-              emailWriteUs.value
-            );
-          }
-        }
-      });
-
-      window.addEventListener("keydown", function (evt) {
-if (evt.keyCode ===27) {
-  evt.preventDefault();
-  if (popup.classList.contains("modal-show")) {
-    popup.classList.remove("modal-show");
-    popup.classList.remove("modal-error");
-  }
-}
-      })
-    </script>
+    <script src="js/script-catalog.js" async></script>
   </body>
 </html>
