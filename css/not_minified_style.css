@@ -2189,11 +2189,7 @@ h1.inner-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  animation: bounce 0.6s;
-}
-
-.modal-error {
-  animation: shake 0.6s;
+  /* animation: bounce 0.6s; */
 }
 
 @-webkit-keyframes bounce {
