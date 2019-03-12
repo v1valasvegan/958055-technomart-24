@@ -917,7 +917,6 @@ background-color: #ca2c37;
 
 .catalog-item .item-price-old {
   min-height: 20px;
-  /* margin-top: 5px; */
   margin-bottom: 10px;
 
   color: #a9a9a9;
@@ -1212,6 +1211,18 @@ background-color: #ca2c37;
   color: #000;
 }
 
+.delivery-tab p {
+  width: 275px;
+}
+
+.warranty-tab p {
+  width: 375px;
+}
+
+.credit-tab p {
+  width: 350px;
+}
+
 .delivery-tab h3:before {
   content: "";
 
@@ -1277,6 +1288,8 @@ background-color: #ca2c37;
   color: #000;
   background-color: #fff;
 }
+
+
 
 .delivery-list {
   list-style: none;
