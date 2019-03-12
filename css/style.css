@@ -1994,9 +1994,6 @@ h1.inner-page {
   color: #000;
 }
 
-/* .modal-map {
-
-} */
 .modal-wrapper {
   display: none;
   position: absolute;
@@ -2032,6 +2029,14 @@ h1.inner-page {
 }
 
 .modal-write-us {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  margin-left: -310px;
+  margin-top: -215px;
+
+  display: none;
+
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 620px;
@@ -2155,6 +2160,17 @@ h1.inner-page {
   width: 460px;
 }
 
+.modal-cart {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+
+  display:none;
+
+  margin-top: -56px;
+  margin-left: -310px;
+}
+
 .modal-cart h2 {
   position: relative;
 
@@ -2185,11 +2201,28 @@ h1.inner-page {
   width: 220px;
 }
 
+.modal-map {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  margin-top: -223px;
+  margin-left: -470px;
+
+  display: none;
+  width: 940px;
+  height: 446px;
+  z-index: 2;
+}
+
+.modal.modal-map {
+  border: none;
+}
+
 .modal-show {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+
+  display: block;
   animation: bounce 0.6s;
+
 }
 
 .modal-error {
@@ -2198,8 +2231,8 @@ h1.inner-page {
 
 @-webkit-keyframes bounce {
   0% {
-    -webkit-transform: translateY(-5000px);
-            transform: translateY(-5000px);
+    -webkit-transform: translateY(-40vh);
+            transform: translateY(-40vh);
   }
 
   66% {
@@ -2220,8 +2253,8 @@ h1.inner-page {
 
 @keyframes bounce {
   0% {
-    -webkit-transform: translateY(-5000px);
-            transform: translateY(-5000px);
+    -webkit-transform: translateY(-40vh);
+            transform: translateY(-40vh);
   }
 
   66% {
@@ -2247,13 +2280,13 @@ h1.inner-page {
   }
 
   10%, 30%, 50%, 70%, 90% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
+    -webkit-transform: translateX(-10vh);
+            transform: translateX(-10vh);
   }
 
   20%, 40%, 60%, 80% {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
+    -webkit-transform: translateX(10vh);
+            transform: translateX(10vh);
   }
 }
 

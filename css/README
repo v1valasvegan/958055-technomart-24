@@ -7,3 +7,9 @@
 css/
 | - style.css
 | - [другие *.css файлы]
+
+--
+
+минимизированный файл style.css
+неминимизированный файл style_original.css
+

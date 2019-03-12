@@ -441,13 +441,14 @@
             Вы можете забрать товар сами,<br />
             заехав в наш офис:
           </p>
-          <a href="https://yandex.ru/maps/-/CBB8NTdSLA">
+          <a class="delivery-map" href="https://yandex.ru/maps/-/CBB8NTdSLA">
             <img
               src="img/map-small.jpg"
               width="300"
               height="158"
               alt="Наш офис по адресу Санкт-Петербург Б. Конюшенная, д. 19/8"
-          /></a>
+          />
+        </a>
           <a class="write-us-link red-button" href="#"
             >Заблудились? Напишите нам!</a
           >
@@ -571,7 +572,7 @@
       </section>
     </footer>
 
-    <div class="modal-wrapper">
+
       <section class="modal modal-write-us">
         <h2 class="visually-hidden">Форма связи</h2>
         <form
@@ -588,7 +589,6 @@
                 name="name"
                 id="name-write-us"
                 placeholder="Имя Фамилия"
-                required
               />
             </p>
             <p>
@@ -599,7 +599,6 @@
                 name="email"
                 id="email-write-us"
                 placeholder="email@example.com"
-                required
               />
             </p>
             <p>
@@ -619,7 +618,23 @@
           <button class="modal modal-close" type="button">Закрыть</button>
         </form>
       </section>
-    </div>
-    <script src="js/script-index.js" async></script>
+
+      <section class="modal modal-cart">
+          <div class="modal-top">
+            <h2>Товар добавлен в корзину!</h2>
+          </div>
+          <div class="modal-bottom"><button class="button red-button">оформить заказ</button><button class="button white-button">продолжить покупки</button></div>
+          <button class="modal modal-close">Закрыть</button>
+        </section>
+
+        <section class="modal modal-map">
+          <h2 class="visually-hidden">Как до нас добраться</h2>
+          <div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003015!2d30.32085871597471!3d59.93871916905433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya+Konyushennaya+Street%2C+19%2F8%2C+Sankt-Peterburg%2C+191186!5e0!3m2!1sen!2sru!4v1552341475066" width="940" height="447" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <button class="modal modal-close">Закрыть</button>
+        </section>
+
+      <script src="js/index.js" async></script>
   </body>
 </html>

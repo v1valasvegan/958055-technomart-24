@@ -7,3 +7,8 @@
 js/
 | - script.js
 | - [другие *.js файлы]
+
+--
+
+минимизированные скрипты: index.js, catalog.js
+неминимизированные скрипты: index_original.js, catalog_original.js
