@@ -8,11 +8,11 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i&amp;subset=cyrillic"
+      href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&amp;subset=cyrillic"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
@@ -54,49 +54,51 @@
           </div>
         </div>
       </section>
-      <div class="middle-header">
-        <p class="navigation-description">
-          Интернет-магазин строительных материалов и&nbsp;инструментов для
-          ремонта
-        </p>
-        <div class="navigation-contacts">
-          <a href="tel:+78125550555">
-            +7 (812) 555-05-55
-          </a>
-          <address>г .Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+      <div class="container">
+        <div class="middle-header">
+          <p class="navigation-description">
+            Интернет-магазин строительных материалов и&nbsp;инструментов для
+            ремонта
+          </p>
+          <div class="navigation-contacts">
+            <a href="tel:+78125550555">
+              +7 (812) 555-05-55
+            </a>
+            <address>г .Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+          </div>
+          <div class="user-navigation">
+            <ul class="user-navigation-list">
+              <li>
+                <a class="login-link" href="login.html">
+                  Войти
+                </a>
+              </li>
+              <li>
+                <a class="registration-link" href="registration.html"
+                  >Регистрация</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="user-navigation">
-          <ul class="user-navigation-list">
+        <nav class="header-site-navigation">
+          <ul class="navigation-item-list">
+            <li><a class="navigation-list-item first" href="#">Главная</a></li>
+            <li><a class="navigation-list-item second" href="#">Компания</a></li>
             <li>
-              <a class="login-link" href="login.html">
-                Войти
-              </a>
-            </li>
-            <li>
-              <a class="registration-link" href="registration.html"
-                >Регистрация</a
+              <a class="navigation-list-item third" href="catalog.html"
+                >Каталог</a
               >
             </li>
+            <li><a class="navigation-list-item fourth" href="#">Новости</a></li>
+            <li>
+              <a class="navigation-list-item fifth" href="#">Спецпредложения</a>
+            </li>
+            <li><a class="navigation-list-item sixth" href="#">Доставка</a></li>
+            <li><a class="navigation-list-item seventh" href="#">Контакты</a></li>
           </ul>
-        </div>
+        </nav>
       </div>
-      <nav class="header-site-navigation container">
-        <ul class="navigation-item-list">
-          <li><a class="navigation-list-item first" href="#">Главная</a></li>
-          <li><a class="navigation-list-item second" href="#">Компания</a></li>
-          <li>
-            <a class="navigation-list-item third" href="catalog.html"
-              >Каталог</a
-            >
-          </li>
-          <li><a class="navigation-list-item fourth" href="#">Новости</a></li>
-          <li>
-            <a class="navigation-list-item fifth" href="#">Спецпредложения</a>
-          </li>
-          <li><a class="navigation-list-item sixth" href="#">Доставка</a></li>
-          <li><a class="navigation-list-item seventh" href="#">Контакты</a></li>
-        </ul>
-      </nav>
     </header>
 
     <main>
@@ -339,34 +341,36 @@
       <div class="wrapper services">
         <section class="services container">
           <h2>Сервисы</h2>
-          <p>
-            Хороший интернет-магазин отличается от плохого не только ценами!<br />
+          <p class="par-small">
+            Хороший интернет-магазин отличается от плохого не только ценами!
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
-          <div class="service-menu-container">
-            <input
-              type="radio"
-              name="service-menu"
-              id="menu-tab-delivery"
-              class="services-menu menu-tab-delivery"
-              checked
-            />
-            <label for="menu-tab-delivery" tabindex="0">Доставка</label>
-            <input
-              type="radio"
-              name="service-menu"
-              id="menu-tab-warranty"
-              class="services-menu menu-tab-warranty"
-            />
-            <label for="menu-tab-warranty" tabindex="0">Гарантия</label>
-            <input
-              type="radio"
-              name="service-menu"
-              id="menu-tab-credit"
-              class="services-menu menu-tab-credit"
-            />
-            <label for="menu-tab-credit" tabindex="0">Кредит</label>
-            <section class="tab delivery-tab">
+          <div class="service-menu">
+            <div class="service-menu-tabs">
+              <input
+                type="radio"
+                name="service-menu"
+                id="menu-tab-delivery"
+                class="services-menu menu-tab-delivery"
+                checked
+              />
+              <label for="menu-tab-delivery" tabindex="0">Доставка</label>
+              <input
+                type="radio"
+                name="service-menu"
+                id="menu-tab-warranty"
+                class="services-menu menu-tab-warranty"
+              />
+              <label for="menu-tab-warranty" tabindex="0">Гарантия</label>
+              <input
+                type="radio"
+                name="service-menu"
+                id="menu-tab-credit"
+                class="services-menu menu-tab-credit"
+              />
+              <label for="menu-tab-credit" tabindex="0">Кредит</label>
+              <section class="tab delivery-tab">
+            </div>
               <h3>Доставка</h3>
               <p>
                 Мы с удовольствием доставим ваш товар прямо<br />
@@ -405,8 +409,8 @@
             для ремонта и строительства не оставит равнодушными любителей
             сэкономить на гастарбайтерах.
           </p>
-          <p>
-            Мы можем доставить ваш товар в самые отдаленные точки России!<br />
+          <p class="par-small">
+            Мы можем доставить ваш товар в самые отдаленные точки России!
             Техномарт работает со многими транспортными компаниями:
           </p>
           <ul class="delivery-list">
@@ -466,7 +470,7 @@
         </section>
         <section class="shop-navigation container">
           <address>
-            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br />
+            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
             +7 (812) 555-05-55
           </address>
           <h2 class="visually-hidden">Навигаци по мазазину</h2>
@@ -486,7 +490,7 @@
         <div class="container">
           <h2 class="visually-hidden">Дополнительная информация</h2>
           <p class="copyright">
-            © 2010-2019 Компания «Техномарт»<br />
+            © 2010-2017 Компания «Техномарт»
             Все права защищены
           </p>
           <div class="social">
@@ -545,11 +549,11 @@
             </ul>
           </div>
           <p class="feedback">
-            Обратная связь:<br />
+            Обратная связь:
             <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
           <p class="development">
-            Разработано–<br />
+            Разработано–
             <a class="button" href="https://htmlacademy.ru/intensive/htmlcss"
               >htmlacademy.ru</a
             >
@@ -566,34 +570,44 @@
         method="POST"
       >
         <div class="modal-top">
-          <p>
-            <label for="name-write-us">Ваше имя:</label><br />
+
+            <p class="par-modal">
+            <label for="name-write-us">
+              Ваше имя:
+            </label>
             <input
-              class="name-icon-write-us"
-              type="text"
-              name="name"
-              id="name-write-us"
-              placeholder="Имя Фамилия"
+            class="name-icon-write-us"
+            type="text"
+            name="name"
+            id="name-write-us"
+            placeholder="Имя Фамилия"
             />
           </p>
-          <p>
-            <label for="email-write-us">Ваш e-mail:</label><br />
+
+
+            <p class="par-modal">
+            <label for="email-write-us">
+              Ваш e-mail:
+            </label>
             <input
-              class="email-icon-write-us"
-              type="email"
-              name="email"
-              id="email-write-us"
-              placeholder="email@example.com"
+            class="email-icon-write-us"
+            type="email"
+            name="email"
+            id="email-write-us"
+            placeholder="email@example.com"
             />
           </p>
-          <p>
-            <label for="letter-write-us">Текст письма:</label><br />
+
+            <p class="par-modal">
+            <label for="letter-write-us">
+              Текст письма:
+            </label>
             <textarea
-              class="letter-icon-write-us"
-              name="letter"
-              id="letter-write-us"
-              placeholder="В свободной форме"
-              rows="5"
+            class="letter-icon-write-us"
+            name="letter"
+            id="letter-write-us"
+            placeholder="В свободной форме"
+            rows="5"
             ></textarea>
           </p>
         </div>
