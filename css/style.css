@@ -1452,11 +1452,13 @@ width: 200px;
 }
 
 .site-navigation-item-list {
+  max-width: 615px;
   margin-top: 38px;
   margin-bottom: 0;
 }
 
 .shop-navigation-item-list {
+  max-width: 590px;
   margin: 0;
 }
 .site-navigation-list-item,
@@ -1750,6 +1752,11 @@ h1.inner-page {
   margin: 0 70px 0 0;
 }
 
+.sorting-column {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .sorting-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1757,6 +1764,8 @@ h1.inner-page {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 
+
+  max-width: 425px;
   margin: 0 0 0 50px;
   padding: 0;
   list-style: none;
