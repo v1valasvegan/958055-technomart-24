@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
 
   <body class="catalog-inner-page">
@@ -21,13 +21,14 @@
         <div class="wrapper">
           <div class="container">
             <h2 class="visually-hidden">Меню</h2>
-            <a class="header-top-item first" href="index.html"
-              ><img
+            <a class="header-top-item first" href="index.html">
+              <img
                 src="img/logo-technomart.svg"
                 width="110"
                 height="18"
                 alt="Логотип магазина «Техномарт»"
-            /></a>
+            />
+          </a>
 
             <form
               class="header-top-item header-search-form"
@@ -64,7 +65,9 @@
             <a href="tel:+78125550555">
               +7 (812) 555-05-55
             </a>
-            <address>г .Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+            <address>
+              г .Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            </address>
           </div>
           <div class="authorized-navigation">
             <ul class="authorized-navigation-list">
@@ -79,10 +82,14 @@
             </ul>
             <ul class="account-navigation-list">
               <li class="account-navigation-list-item first">
-                <a href="orders.html">Мои заказы</a>
+                <a href="orders.html">
+                  Мои заказы
+                </a>
               </li>
               <li class="account-navigation-list-item second">
-                <a href="account.html">Личный кабинет</a>
+                <a href="account.html">
+                  Личный кабинет
+                </a>
               </li>
             </ul>
           </div>
@@ -90,16 +97,39 @@
         <nav class="header-site-navigation">
           <ul class="navigation-item-list">
             <li>
-              <a class="navigation-list-item first" href="index.html">Главная</a>
+              <a class="navigation-list-item first" href="index.html">
+                Главная
+              </a>
             </li>
-            <li><a class="navigation-list-item" href="#">Компания</a></li>
+            <li><a class="navigation-list-item" href="#">
+              Компания
+            </a>
+          </li>
             <li>
-              <a class="navigation-list-item" href="#">Каталог</a>
+              <a class="navigation-list-item" href="#">
+                Каталог
+              </a>
             </li>
-            <li><a class="navigation-list-item" href="#">Новости</a></li>
-            <li><a class="navigation-list-item" href="#">Спецпредложения</a></li>
-            <li><a class="navigation-list-item" href="#">Доставка</a></li>
-            <li><a class="navigation-list-item seventh" href="#">Контакты</a></li>
+            <li>
+              <a class="navigation-list-item" href="#">
+                Новости
+              </a>
+            </li>
+            <li>
+              <a class="navigation-list-item" href="#">
+                Спецпредложения
+              </a>
+            </li>
+            <li>
+              <a class="navigation-list-item" href="#">
+                Доставка
+              </a>
+            </li>
+            <li>
+              <a class="navigation-list-item seventh" href="#">
+                Контакты
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -112,9 +142,19 @@
             <span class="visually-hidden">На главную</span>
           </a>
         </li>
-        <li><a href="">Каталог</a></li>
-        <li><a href="">Инструмент</a></li>
-        <li class="breadcrumbs-current">Перфораторы</li>
+        <li>
+          <a href="#">
+            Каталог
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Инструмент
+          </a>
+        </li>
+        <li class="breadcrumbs-current">
+          Перфораторы
+        </li>
       </ul>
 
       <h1 class="inner-page">Перфораторы</h1>
@@ -136,7 +176,8 @@
                 <div class="right-slider"></div>
                 <div class="right-line"></div>
               </div>
-              <span>0</span><span>30000</span>
+                <div class="slider-value">0</div>
+                <div class="slider-value">30000</div>
             </section>
 
             <section class="filters-brand">
@@ -184,7 +225,7 @@
                   <input
                     class="filter-input fliter-input-checkbox"
                     type="checkbox"
-                    name="hithachi"
+                    name="hitachi"
                     id="filter-hitachi"
                   />
                   <label for="filter-hitachi" tabindex="0">Hitachi</label>
@@ -204,9 +245,7 @@
                     value="battery"
                     checked
                   />
-                  <label for="filter-battery" tabindex="0"
-                    >Аккумуляторные</label
-                  >
+                  <label for="filter-battery" tabindex="0">Аккумуляторные</label>
                 </li>
                 <li class="filter-option">
                   <input
@@ -228,13 +267,19 @@
               <h2>Сортировка:</h2>
               <ul class="sorting-list">
                 <li class="sorting-list-item active">
-                  <a class="sorting-property-link active" href="#">по цене</a>
+                  <a class="sorting-property-link active" href="#">
+                    по цене
+                  </a>
                 </li>
                 <li class="sorting-list-item ">
-                  <a class="sorting-property-link" href="#">по типу</a>
+                  <a class="sorting-property-link" href="#">
+                    по типу
+                  </a>
                 </li>
                 <li class="sorting-list-item last">
-                  <a class="sorting-property-link" href="#">по функционалу</a>
+                  <a class="sorting-property-link" href="#">
+                    по функционалу
+                  </a>
                 </li>
               </ul>
               <ul class="sorting-direction-list">
@@ -495,7 +540,7 @@
         <div class="container">
           <h2 class="visually-hidden">Дополнительная информация</h2>
           <p class="copyright">
-            © 2010-2019 Компания «Техномарт»<br />
+            © 2010-2019 Компания «Техномарт»
             Все права защищены
           </p>
           <div class="social">

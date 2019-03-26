@@ -579,6 +579,7 @@ a.header-top-item {
 }
 
 .user-navigation {
+  max-width: 300px;
   margin-left: auto;
 }
 
@@ -879,8 +880,8 @@ a.header-top-item {
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
+  padding-right: 25px;
   padding-left: 30px;
-  padding-right: 24px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-bottom: 20px;
@@ -1126,8 +1127,8 @@ a.header-top-item {
 }
 .brands-list-item a:active {
   opacity: 0.3;
-  -webkit-box-shadow: 0 4 10 0 rgba(41, 52, 73, 0.5);
-  box-shadow: 0 4 10 0 rgba(41, 52, 73, 0.5);
+  -webkit-box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
+  box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
 }
 
 .wrapper.services {
@@ -1150,9 +1151,13 @@ a.header-top-item {
   margin: 0;
 }
 
-.par-small {
+.services .par-small {
   max-width: 400px;
   margin-top: 25px;
+}
+
+.par-medium {
+  max-width: 420px;
 }
 
 .service-menu-container > input {
@@ -1214,7 +1219,7 @@ a.header-top-item {
 .warranty-tab {
   background-image: url("../img/warranty.png");
   background-repeat: no-repeat;
-  background-position: 150px 25px;
+  background-position: 235px 0;
 }
 
 .credit-tab {
@@ -1246,11 +1251,12 @@ a.header-top-item {
 
 .services .red-button {
   margin-top: 25px;
-  padding: 0 44px 0 44px;
+  width: 195px;
+  line-height: 18px;
 }
 
 .services p {
-  margin-top: 25px;
+  margin-top: 20px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -1261,7 +1267,7 @@ a.header-top-item {
 .services h3 {
   position: relative;
 
-  margin: 0 0 25px 0;
+  margin: 0;
 
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 36px;
@@ -1273,15 +1279,18 @@ a.header-top-item {
 }
 
 .delivery-tab p {
+  margin-top: 25px;
   width: 275px;
 }
 
 .warranty-tab p {
   width: 375px;
+  margin-top: 25px;
 }
 
 .credit-tab p {
   width: 350px;
+  margin-top: 25px;
 }
 
 .delivery {
@@ -1340,6 +1349,8 @@ a.header-top-item {
 }
 
 .delivery-map {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1378,7 +1389,7 @@ a.header-top-item {
 }
 
 .delivery-self .red-button {
-  width: 300px;
+  width: 295px;
   padding-left: 5px;
 }
 
@@ -1479,8 +1490,8 @@ a.header-top-item {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 35px;
-  padding-bottom: 45px;
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 .shop-navigation a {
@@ -1504,8 +1515,8 @@ a.header-top-item {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 37px;
-  padding-bottom: 27px;
+  padding-top: 40px;
+  padding-bottom: 35px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 
@@ -1524,7 +1535,8 @@ a.header-top-item {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -1730,8 +1742,11 @@ h1.inner-page {
 }
 
 .sorting-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .sorting-list {
@@ -1871,6 +1886,7 @@ h1.inner-page {
 }
 
 .filters-price {
+  min-height: 180px;
   padding: 0 0 25px 0;
   border: none;
 }
@@ -1937,27 +1953,34 @@ h1.inner-page {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.filters-price span {
-  display: inline-block;
+.slider-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+
+  float: left;
   width: 95px;
   height: 38px;
   margin-top: 10px;
 
   font-family: "PT sans", Arial, sans-serif;
   font-size: 17px;
-  line-height: 38px;
-  text-align: center;
-  vertical-align: middle;
   color: #000;
   background-color: #f7f3ec;
 }
 
-.filters-price span:nth-last-child(1) {
+.slider-value:nth-last-child(1) {
   position: relative;
   margin-left: 30px;
 }
 
-.filters-price span:nth-last-child(1)::before {
+.slider-value:nth-last-child(1)::before {
   position: absolute;
   top: 19px;
   left: -20px;
@@ -2053,7 +2076,7 @@ h1.inner-page {
 
 .filters .button {
   width: 140px;
-  margin-top: 75px;
+  margin-top: 80px;
 }
 
 .pagination-list {
@@ -2182,8 +2205,13 @@ h1.inner-page {
 }
 
 .modal-top p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .modal-cart .modal-top {
